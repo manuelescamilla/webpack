@@ -1,3 +1,9 @@
+/* Shared */
+@import "shared/colors.css";
+@import "shared/typography.css";
+/* Components */
+@import "components/article.css";
+
 img {
-    border: 5px solid steelblue;
+    border: 5px solid var(--color-blue);
 }

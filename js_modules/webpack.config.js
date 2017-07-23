@@ -15,8 +15,14 @@ const config = {
                 test: /\.js$/,
             },
             {
-                loader: ExtractTextPlugin.extract({
-                   loader: 'css-loader'
+                use: ExtractTextPlugin.extract({
+                    use:[
+                        {
+                            loader: 'css-loader',
+                            options: { importLoaders: 1 },
+                        },
+                        'postcss-loader',
+                    ]
                 }),
                 test: /\.css$/
             },
